@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<body class="editor_false  lang_ru     not_ie">
+
+    <div id="wrapper" class="" style="padding-top: 88px;">
+
+        {% include 'navbar.html' %}
+
+        <div data-hcolor="#ff6600" class="section clip_none bg_text show_btn no_image section301 animate"
+            style="background-color:#ffffff;background-image:url(/img/1920x0/image_10047.jpg);padding-top:90px;padding-bottom:70px;"
+            data-id="4722812" id="b_4722812"><a name="anchor7"></a>
+            <div class="section_inner width1170">
+                <div class="title"><span style="color:#424242"><span style="font-size:50px">Новости в нашем
+                            блоге</span></span></div>
+                <div class="sub_title">
+                    <p><span style="color:#000000"><span style="font-size:22px"></span></span><span
+                            style="font-size:20px">Рассказываем о наиболее популярных новостях из мира
+                            литературы</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
+                </div>
+
+
+                {% for new in news %}
+                <div class="arr1 size_700x500 btn_under_text">
+                    <div data-link="" class="image1 link_on size_700x500 ">
+                        <img data-lazy="1" loading="lazy" width="350px" height="250px" src="{{new.image.url}}">
+                    </div>
+                    <div class="right size_700x500 btn_under_text ">
+                        <div class="txt1 ">
+                            <p><span style="color:#424242"><span style="font-size:20px"><strong>{{ new.title }}</strong></span></span></p>
+                            <p><br></p>
+                            <p><span style="font-family:montserrat"><span style="font-size:17px">{{ new.text }}</span></span></p>
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+                    
+                </div>
+                {% endfor %}
+                
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+{% endblock content %}

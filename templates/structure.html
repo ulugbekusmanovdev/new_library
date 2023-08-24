@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<body class="editor_false  lang_ru     not_ie">
+
+    <div id="wrapper" class="" style="padding-top: 88px;">
+
+        <div class="structure">
+            <div class="structure_container">
+                <h1 class="structure_title">Структура</h1>
+                <div class="structure_content">
+
+                    {% for s in structure %}
+                    <div class="structure_box">
+                        <img src="{{s.d_img.url}}" alt="">
+                        <div class="structure_text">
+                            <h1>{{s.director}}</h1>
+                            <p>{{ s.director_info }}</p>
+                        </div> 
+                    </div>
+                    {% endfor %}
+
+                    {% for s in structure %}
+                    <div class="structure_box">
+                        <img src="{{s.ibo_img.url}}" alt="">
+                        <div class="structure_text">
+                            <h1>{{s.ibo}}</h1>
+                            <p>{{ s.ibo_info }}</p>
+                        </div> 
+                    </div>
+                    {% endfor %}
+
+                    {% for s in structure %}
+                    <div class="structure_box">
+                        <img src="{{s.e_res_img.url}}" alt="">
+                        <div class="structure_text">
+                            <h1>{{s.e_res}}</h1>
+                            <p>{{ s.e_res_info }}</p>
+                        </div> 
+                    </div>
+                    {% endfor %}
+                    
+
+                   
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+{% endblock content %}

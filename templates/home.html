@@ -1,0 +1,537 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<body class="editor_false  lang_ru     not_ie">
+	<div id="wrapper" class="" style="padding-top: 88px;">
+
+		
+
+		<div data-hcolor="#ff6600" class="section no_fontsize section153 clip_none"
+			style="background-color:#ffffff;background-image:url(/static/img/bg_head.jpg);padding-top:100px;padding-bottom:50px;--light_opacity:0.75;--light_color:#ffffff;--light_bg:#212121;--light_radius:0;--light_padding:20px;"
+			data-id="4722803" id="b_4722803"><a name="a_2410757"></a>
+			<div class="dark"></div>
+			<div class="section_inner all_border w450h60 btn_center">
+				<div class="layer">
+					<div class="layer_cover"></div>
+					<div class="title" style="margin-bottom:10px;font-weight:600;">
+						<p><strong><span style="font-size:72px">Добро пожаловать</span></strong></p>
+						<p><strong><span style="font-size:72px">на сайт библиотеки</span></strong></p>
+					</div>
+					<div class="sub_title" style="margin-bottom:24px;font-weight:400;"><br></div>
+					<a href="books.html">
+					<div class="btn1 surround animation dark" data-hcolor="#f78960" style="background-color:#f78960; border-radius: 2em; box-shadow: 0; font-size: 18px">Книги</div>
+				</a>
+					<div class="btn_descr"><br></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div data-hcolor="#f5550e"
+		class="section section130 clip_none s_mode_s200 mobile_col2 inner_width img_square flex_fix transparent_ico"
+		style="background-color:#fcf5ed;padding-top:80px;padding-bottom:80px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#fff;"
+		data-id="anchor6" id="anchor6"><a name="a_4732122"></a>
+	
+		<div class="section_inner all_border btn_move"
+			style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400;">
+			<a style="text-decoration: none; color: #000;" href="{% url 'books' %}"><div class="title"><b>Откройте для себя новую книгу</b></div></a>
+			</div>
+			<div class="catalog_items short_text count5 s200">
+				<div class="arr1">
+					<div class="col_4">
+						<div data-link="" class="image1 s200 shadow"><img data-lazy="1" width="200px" height="200px" loading="lazy"
+								src="./static/img/sall.jpg"></div>
+						<div class="title1">Название книги</div>
+						<div class="btn1 surround  dark" style="background-color:#f5550e; border-radius: 10em">
+							Читать</div>
+				
+					</div>
+				</div>
+
+				
+				<div class="arr1">
+					<div class="col_4">
+						<div data-link="" class="image1 s200 shadow"><img data-lazy="1" width="200px" height="180px" loading="lazy"
+								src="./static/img/klint.jpg"></div>
+						<div class="title1">Название книги</div>
+						<div class="btn1 surround  dark" style="background-color:#f5550e; border-radius: 10em">
+							Читать</div>
+					</div>
+				</div>
+
+				<div class="arr1">
+					<div class="col_4">
+						<div data-link="" class="image1 s200 shadow"><img data-lazy="1" width="200px" height="180px" loading="lazy"
+								src="./static/img/klint.jpg"></div>
+						<div class="title1">Название книги</div>
+						<div class="btn1 surround  dark" style="background-color:#f5550e; border-radius: 10em">
+							Читать</div>
+				
+					</div>
+				</div>
+
+				<div class="arr1">
+					<div class="col_4">
+						<div data-link="" class="image1 s200 shadow"><img data-lazy="1" width="200px" height="200px" loading="lazy"
+								src="./static/img/sall.jpg"></div>
+						<div class="title1">Название книги</div>
+						<div class="btn1 surround  dark" style="background-color:#f5550e; border-radius: 10em">
+							Читать</div>
+				
+					</div>
+				</div>
+
+				<div class="arr1">
+					<div class="col_4">
+						<div data-link="" class="image1 s200 shadow"><img data-lazy="1" width="200px" height="200px" loading="lazy"
+								src="./static/img/sall.jpg"></div>
+						<div class="title1">Название книги</div>
+						<div class="btn1 surround  dark" style="background-color:#f5550e; border-radius: 10em">
+							Читать</div>
+				
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+
+
+		<div data-hcolor="#ff6600" class="section clip_none bg_text show_btn no_image section301 animate"
+			style="background-color:#ffffff;background-image:url(/img/1920x0/image_10047.jpg);padding-top:90px;padding-bottom:70px;"
+			data-id="4722812" id="b_4722812"><a name="anchor7"></a>
+			<div class="section_inner width1170">
+				<div class="title"><span style="color:#424242"><span style="font-size:50px">Новости в нашем
+							блоге</span></span></div>
+				<div class="sub_title">
+					<p><span style="color:#000000"><span style="font-size:22px"></span></span><span
+							style="font-size:20px">Рассказываем о наиболее популярных новостях из мира
+							литературы</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
+				</div>
+				
+
+				{% for new in news %}
+				<div class="arr1 size_700x500 btn_under_text">
+					<div data-link="" class="image1 link_on size_700x500 ">
+						<img data-lazy="1"
+							
+							loading="lazy" width="350px" height="250px"
+							src="{{new.image.url}}"></div>
+					<div class="right size_700x500 btn_under_text ">
+						<div class="txt1 ">
+							<p><span style="color:#424242"><span style="font-size:20px"><strong>{{new.title}}</strong></span></span></p>
+							<p><br></p>
+							<p><span style="font-family:montserrat"><span style="font-size:17px">{{ new.text }}</span></span></p>
+						</div><a href="{% url 'news' %}" class="btn1 surround  dark"
+							data-hcolor="#f78960"
+							style="background-color:#f78960; border-radius: 2em; box-shadow: 0">Все</a>
+				
+					</div>
+					<div class="clear"></div>
+				</div>
+				{% endfor %}
+
+			
+			<div class="clear"></div>
+		</div>
+
+		<div class="clip_none section bg_text section250 mode_3"
+			style="background-color:#f1f1f1;margin-top:80px;padding-bottom:80px;" data-id="4754183" id="b_4754183"><a
+				name="a_4754183"></a>
+			<div class="section_inner all_border ">
+				<div class="title">Объявления</div>
+				<div class="arr1">
+					{% for a in adt %}
+					<div class="col_2">
+						<div class="overlay_image_box">
+							<div class="overlay_image_title title1"><span style="font-family:ubuntu"><strong><span
+											style="font-size:18px">{{a.title}}</span></strong></span></div>
+							<div class="overlay_image_subtitle subtitle1"><span style="font-family:ubuntu"><span
+										style="color:#000"><span style="font-size:16px">{{a.text}}</span></span></span>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+
+				</div>
+				<div class="clear"></div>
+			</div>
+			<a href="{% url 'adt' %}">more</a>
+		</div>
+
+		<div class="section section1152 clip_none animate"
+			style="background-color:#fcf5ed;margin-top:90px;padding-bottom:80px;" data-id="4722808" id="b_4722808"><a
+				name="anchor4"></a>
+			<div class="section_inner">
+				<div class="title">Ресурсы библиотеки</div>
+				<div class="sub_title"><br>
+					<div><br></div>
+				</div>
+				<div class="images">
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_ilbirs.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/libkg.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_cochraneLibrary.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_ebsco.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_elibrary.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_elibrary.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_ibook.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_kirlibnet.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_KR.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_lib.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_minis.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_nasia.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_neb.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_okuma.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_oshsu.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_wiley.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/logo_window.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+					<div class="image_box arr1">
+						<div class="img1116"
+							style="background-image:url(/static/img/partner/msp.png)"></div>
+						<div class="overlay_image_box" data-link-target="" data-link=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section section226 clip_none animate"
+			style="background-color:#ffffff;padding-top:90px;padding-bottom:60px;" data-id="4722809" id="b_4722809"><a
+				name="anchor5"></a>
+			<div class="section_inner width1170 image_move">
+				<div class="title"><span style="color:#424242"><span style="font-size:50px">Приходите к нам в
+							библиотеку</span></span></div>
+
+				{% for a in about %}
+				<div class="sub_title"><span style="font-size:20px">{{a.title}}</span></div>
+				<div data-link="" class="arr1 size_900x700 align_center rightt">
+					<div class="image1 size_900x700 shadow"><img data-lazy="1"
+							width="450px" height="350px" loading="lazy"
+							src="./static/img/about.jpg"></div>
+					<div class="txt1">
+						<div></div>
+						<div><br>{{ a.info|safe }}</div>
+						
+					</div>
+				</div>
+				{% endfor %}
+
+			</div>
+		</div>
+
+		
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+			  <div class="carousel-item active">
+				<img class="d-block w-100" src="./static/img/asus12.jpg" alt="First slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100" src="./static/img/news1.jpg" alt="Second slide">
+			  </div>
+			  <div class="carousel-item">
+				<img class="d-block w-100" src="./static/img/news1.jpg" alt="Third slide">
+			  </div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+		  </div>
+
+	
+
+
+		{% comment %}
+		<div class="section clip_none section147" style="background-color:#fff;padding-top:80px;padding-bottom:80px;"
+			data-id="4732138" id="b_4732138"><a name="a_4732138"></a>
+			<div class="section_inner width1170">
+				<div class="title"><b>Фото</b></div>
+				<div class="sub_title">Сложно сказать, почему коронованный герцог графства попахивает безумием</div>
+				<div class="arr1">
+					<div class="image_box1 img_zoom "><img data-lazy="1"
+							
+							loading="lazy" src="./static/img/news1.jpg">
+						<div class="overlay_image_box active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+					<div class="image_box3 img_zoom "><img data-lazy="1"
+							
+							alt="" loading="lazy" src="./static/img/news1.jpg">
+						<div class="overlay_image_box active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+					<div class="image_box5 img_zoom "><img data-lazy="1"
+						
+							alt="" loading="lazy" src="./static/img/news2.jpg">
+						<div class="overlay_image_box active_off" data-link="" data-link-target="0">
+							<div class="overlay_image_title"></div>
+							<div class="overlay_image_descr"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		{% endcomment %}
+
+
+
+		<!-- <div class="section section1160" style="background-color:#f2f2f2" data-id="4722860" id="b_4722860"><a
+				name="a_4722860"></a>
+			<div class="section_inner">
+				<div class="title">Наши видеозаписи</div>
+				<div class="sub_title">Вы можете поддержать наш канал на ютуб!</div>
+				<div class="images">
+					<div class="go_left" style="background:#000"></div>
+					<div class="image_screen">
+						<div class="image_wrapper">
+							<div class="arr1">
+								<div class="video1" style="background:#000">
+									<div class="video_holder" data-vid="41FNNiEg4JI" data-hosting="youtube"
+										data-video="https://www.youtube.com/embed/41FNNiEg4JI"
+										style="width:299.8px; height:149.8px; background-image: url(https://i.ytimg.com/vi/41FNNiEg4JI/maxresdefault.jpg);">
+									</div>
+								</div>
+								<div class="content">
+									<div class="play_btn"></div>
+								</div>
+							</div>
+							<div class="arr1">
+								<div class="video1" style="background:#000">
+									<div class="video_holder" data-vid="l6S6bzUlc9w" data-hosting="youtube"
+										data-video="https://www.youtube.com/embed/l6S6bzUlc9w"
+										style="width:299.8px; height:149.8px; background-image: url(https://i.ytimg.com/vi/l6S6bzUlc9w/maxresdefault.jpg);">
+									</div>
+								</div>
+								<div class="content">
+									<div class="play_btn"></div>
+								</div>
+							</div>
+							<div class="arr1">
+								<div class="video1" style="background:#000">
+									<div class="video_holder" data-vid="xb2l4Tu96Y0" data-hosting="youtube"
+										data-video="https://www.youtube.com/embed/xb2l4Tu96Y0"
+										style="width:299.8px; height:149.8px; background-image: url(https://i.ytimg.com/vi/xb2l4Tu96Y0/maxresdefault.jpg);">
+									</div>
+								</div>
+								<div class="content">
+									<div class="play_btn"></div>
+								</div>
+							</div>
+							<div class="arr1">
+								<div class="video1" style="background:#000">
+									<div class="video_holder" data-vid="rnU8ICyu2T4" data-hosting="youtube"
+										data-video="https://www.youtube.com/embed/rnU8ICyu2T4"
+										style="width:299.8px; height:149.8px; background-image: url(https://i.ytimg.com/vi/rnU8ICyu2T4/maxresdefault.jpg);">
+									</div>
+								</div>
+								<div class="content">
+									<div class="play_btn"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="go_right" style="background:#000"></div>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="section section117 clip_none"
+			style="padding-top:120px;padding-bottom:120px;" data-id="4723136" id="b_4723136"><a
+				name="anchor9"></a>
+			<div class="section_inner width1170">
+				<div class="title"><span style="font-family:roboto"><span
+							style="font-size:42px"><strong>История</strong></span></span></div>
+				<div class="sub_title"><span style="font-size:18px"><span style="font-family:roboto">Научная библиотека
+							Ошского Государственного университета активно и плодотворно функционирует с 1939 года со дня
+							основания данного учебного заведения. На основе постановления №1142 совета народных
+							комиссаров Кыргызстана от 10 августа 1939 года была образована Ошская школа учителей, в 1951
+							году постановлением №1759 правительства СССР – Ошский Государственный педагогический
+							институт, с 17 июня 1992 года согласно постановлению №202 президента КР был создан Ошский
+							Государственный Университет.</span></span><br></div>
+				<div class="arr_wrapper">
+					<div class="arr1">
+						<div data-link="" class="col_2 image1 border image_size_940x680 "><img data-lazy="1"
+								
+								width="470px" height="340px" loading="lazy"
+								src="./static/img/about.jpg"></div>
+						<div class="col_2">
+							<div class="txt1">
+								<p><span style="font-family:roboto"><span style="font-size:18px">Люди, руководящие и
+											внесшие большой вклад в создание научной библиотеки университета: А.И.
+											Федова, Ф.Х. Дауранова, К. Турсунова, А.В. Ильяева, М.Ю. Клебанова.
+											1947–1996 годы под руководством М.Ю. Клебановой фонд библиотеки был
+											переписан в инвентарные журналы, были составлены алфавитные, системные и
+											рабочие каталоги. 1996–2005 годы А. Г. Ибрагимова работала директором
+											научной библиотеки. В эти годы фонд библиотеки пополнился учебниками,
+											научно–методическими пособиями, диссертациями, словарями и другими книгами,
+											общее количество, которых превысило 730 тысяч. Фонд библиотеки достиг 812661
+											единиц. 2005–2009 годы С. С. Токтомамбетова работала в качестве директора
+											научной библиотеки.</span></span></p>
+							</div>
+						</div>
+					</div>
+					<div class="arr1">
+						<div data-link="" class="col_2 image1 border image_size_940x680 "><img data-lazy="1"
+							
+								width="470px" height="340px" loading="lazy" alt=""
+								src="./static/img/about.jpg"></div>
+						<div class="col_2">
+							<div class="txt1"><span style="font-size:17px"><span style="font-family:roboto">С 2009 по
+										2011 год научная библиотека университета находилась в ведении Департамента новых
+										технологий и инвестиций, действовали четыре центральные библиотеки и три отдела.
+										Первым заведующим кафедрой был кандидат биологических наук, доцент Эркебаев
+										Т.К., затем заведующим кафедрой был кандидат педагогических наук, доцент,
+										депутат городского совета Жоробеков Т.А. В это время книжный фонд научной
+										библиотеки составлял 880 000 экземпляров.</span></span><br></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div data-hcolor="#ff6600"
+			class="section section130 clip_none s_mode_s120 mobile_col2 inner_width img_square transparent_ico"
+			style="background-color:#ffffff;padding-top:30px;padding-bottom:60px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#ffffff;"
+			data-id="4722806" id="b_4722806"><a name="anchor3"></a>
+			<div class="section_inner all_border"
+				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400;">
+				<a style="text-decoration: none; color: #000;" href="{% url 'structure' %}"><div class="title">Структура<br></div></a>
+				<div class="catalog_items short_text count3 s120 ">
+					
+					{% for s in structure %}
+					<div class="arr1">
+						<div class="col_4">
+							<div data-link="" class="image1 s120 radius shadow"><img data-lazy="1"
+									src="{{s.d_img.url}}"
+									
+									width="120px" height="120px" loading="lazy"></div>
+							<div class="title1"><u><span style="font-size:20px">Директор</span></u></div>
+							<div class="txt1"><span style="font-size: 17px;">{{s.director}}</span></div>
+						</div>
+					</div>
+					{% endfor %}
+					{% for s in structure %}
+					<div class="arr1">
+						<div class="col_4">
+							<div data-link="" class="image1 s120 radius shadow"><img alt="" data-lazy="1"
+									src="{{s.ibo_img.url}}"
+									
+									width="120px" height="120px" loading="lazy"></div>
+							<div class="title1"><u><span style="font-size:20px">ИБО</span></u></div>
+							<div class="txt1"><span style="font-size:17px">{{s.ibo}}</span><br></div>
+						</div>
+					</div>
+					{% endfor %}
+					{% for s in structure %}
+					<div class="arr1">
+						<div class="col_4">
+							<div data-link="" class="image1 s120 radius shadow"><img alt="" data-lazy="1"
+									src="{{s.e_res_img.url}}"
+									
+									width="120px" height="120px" loading="lazy"></div>
+							<div class="title1"><u><span style="font-size:20px">Отдел электронных ресурсов</span></u>
+							</div>
+							<div class="txt1"><span style="font-size: 17px;">{{s.e_res}}</span></div>
+						</div>
+					
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+
+		
+
+	</div>
+
+
+</body>
+
+{% include 'footer.html' %}
+{% endblock content %}

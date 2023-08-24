@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+
+
+
+
+<body class="editor_false  lang_ru     not_ie">
+
+    <div id="wrapper" class="" style="padding-top: 88px;">
+
+        <div class="adt">
+            <div class="structure_container">
+                <h1 class="structure_title">Объявление</h1>
+                <div class="adt_content">
+
+                    {% for a in adt %}
+                    <div class="adt_box">
+                        <div class="adt_text">
+                            <h1>{{a.title}}</h1>
+                            <p>{{ a.text }}</p>
+                        </div> 
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+{% endblock content %}
