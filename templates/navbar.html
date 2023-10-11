@@ -1,41 +1,69 @@
 {% load static %}
 
-<div class="section section2116 fixed_top" "="" style=" background-color: rgb(255, 255, 255); padding-top: 0px;
+<div class="section section2116 fixed_top" style=" background-color: rgb(255, 255, 255); padding-top: 0px;
     padding-bottom: 0px; position: fixed; top: 0px; z-index: 101; left: 0px;" data-id="4722802" id="b_4722802">
-    <a name="a_2478125"></a>
+
     <div class="section_inner logo_left">
         <div class="wrapp">
-            <div class="menu-toogler square new_burger" style="color:#000;background-color:#fff"><svg>
-                    <use xlink:href="/img/menu_burger.svg#menu"></use>
-                </svg></div>
-            <div class="logo">
-                <div class="logo_img">
-                    <img data-lazy="1" src="{% static 'img/logo.png' %}"></div>
+            <!-- <div class="menu-toogler square new_burger" style="color:#000;background-color:#fff">
+
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div> -->
+            <div class="menu-toogler square new_burger" style="color:#000;background-color:#fff">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path
+                                d="M501.333,96H10.667C4.779,96,0,100.779,0,106.667s4.779,10.667,10.667,10.667h490.667c5.888,0,10.667-4.779,10.667-10.667S507.221,96,501.333,96z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M501.333,245.333H10.667C4.779,245.333,0,250.112,0,256s4.779,10.667,10.667,10.667h490.667c5.888,0,10.667-4.779,10.667-10.667S507.221,245.333,501.333,245.333z" />
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <path
+                                d="M501.333,394.667H10.667C4.779,394.667,0,399.445,0,405.333C0,411.221,4.779,416,10.667,416h490.667c5.888,0,10.667-4.779,10.667-10.667C512,399.445,507.221,394.667,501.333,394.667z" />
+                        </g>
+                    </g>
+                </svg>
+
             </div>
-            <div class="menu1 menu_block animate_menu3"
-                style="color:#212121;background-color:#fff;font-size:17px">
-                <ul style="width:1100px">
-                    <li class="level0"><a href="#"
-                            title="Главная">Главная</a></li>
-                    <li class="level0"><a href="#anchor6"
-                            title="Книги ">Книги </a></li>
-                    <li class="level0"><a href="#anchor7"
-                            title="Новости">Новости</a></li>
-                    <li class="level0"><a href="#anchor4"
-                            title="Ресурсы библиотек">Ресурсы библиотек</a></li>
-                    <li class="level0"><a href="#anchor5"
-                            title="О библиотеке">О библиотеке</a></li>
-                    <li class="level0"><a href="#anchor9"
-                            title="История">История</a></li>
-                    <li class="level0"><a href="#anchor3"
-                            title="Структура">Структура</a></li>
-                    <li class="level0"><a href="#anchor8"
-                            title="Контакты">Контакты</a></li>
-                    <li class="level0"><a href="{% url 'catalog' %}"
-                            title="Каталог">Каталог</a></li>
-                    <li class="level0"><a href="{% url 'readers' %}"
-                            title="Читатель">Читатель</a></li>
-                           
+            <div class="logo">
+                <a href="{% url 'home' %}">
+                    <div class="logo_img">
+                        <img data-lazy="1" src="{% static 'img/logo.png' %}">
+                    </div>
+            </div>
+            </a>
+
+
+            <div class="menu1 menu_block animate_menu3" style="color:#212121;background-color:#fff;font-size:17px">
+                <ul style="width:100%">
+                    <li class="level0">
+                        <a href="{% url 'home'  %}" title="Главная">Главная</a>
+                        <ul class="nav_submenu">
+                            <li><a href="{% url 'home'  %}#anchor5" title="О библиотеке">О библиотеке</a></li>
+                            <li><a href="{% url 'home'  %}#anchor9" title="История">История</a></li>
+                            <li><a href="{% url 'home'  %}#anchor3" title="Структура">Структура</a></li>
+                        </ul>
+                    </li>
+                    <li class="level0"><a href="{% url 'home'  %}#anchor6" title="Книги ">Книги </a></li>
+                    <li class="level0"><a href="{% url 'home'  %}#anchor7" title="Новости">Новости</a></li>
+                    <li class="level0"><a href="{% url 'home'  %}#anchor4" title="Ресурсы библиотек">Ресурсы
+                            библиотек</a></li>
+                    <li class="level0"><a href="{% url 'home'  %}#anchor8" title="Контакты">Контакты</a></li>
+                    <li class="level0"><a href="{% url 'catalog' %}" title="Каталог">Каталог</a></li>
+                    <li class="level0"><a href="{% url 'readers' %}" title="Читатель">Читатель</a></li>
+                    <li class="level0"><a href="{% url 'personal' %}" title="Библиотекарям">Библиотекарям</a></li>
+                    <li class="level0" style="display: none;"><a href="#" title="Регистрация">Рег</a></li>
                 </ul>
             </div>
         </div>

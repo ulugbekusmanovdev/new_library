@@ -1,0 +1,91 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+<body class="editor_false  lang_ru  not_ie">
+
+
+    <div style="margin: 115px auto 60px;  width: 85%;">
+        <h1 style="text-align: center;">Библиотекарям </h1>
+
+        <div class="personal">
+
+            <div class="personal_box">
+                <!-- <div class="personal_photo">
+                        <img src="{{request.user.customer.profile_pic.url}}" alt="">
+                        <div class="personal_icon">
+                            <i class="bi bi-pencil-fill"></i>
+                            <i class="bi bi-trash3-fill"></i>
+                        </div>
+                    </div> -->
+                <form class="personal_info" method="POST" action="" enctype="multipart/form-data">
+
+                    <div class="personal_item">
+                        <h4>ФИО:</h4> Test
+                    </div>
+                    <div class="personal_item">
+                        <h4>Номер:</h4> TESt
+                    </div>
+                    <div class="personal_item">
+                        <h4>Email:</h4> TESt
+                    </div>
+                    <!-- <div class="personal_item">
+                            <h4>Фото:</h4>
+                        </div> -->
+                    <div class="personal_item">
+                        <h4>Факультет:</h4> TESt
+                    </div>
+                    <button class="personal_btn" type="submit">Сохранить</button>
+                </form>
+            </div>
+            <div class="personal_inner">
+                <div class="personal_block">
+                    <h3>Личный кабинет</h3>
+                    <ul>
+                        <li><a class="personal_title" target="_blank"
+                                href="http://avn.oshsu.kg/AVN_search_st.html">Проверка задолжности
+                                студента</a></li>
+                        <!-- <li><a class="personal_title" href="#">Видеоуроки </a></li> -->
+                        <li><a class="personal_title" href="#">Добавление книги</a>
+                        </li>
+
+                        <li><a class="personal_title" href="#">Выход</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        {% for info in irbis %}
+        <h2 class="catalog_irbis">ИРБИС 64 <br></h2>
+
+        <p class="catalog_text"></p>
+
+        {% endfor %}
+        <h2 style="text-align: center;">Видеоуроки</h2>
+        <div style="display: flex; justify-content: space-around;">
+            <div style="margin: 20px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tWIKh0HtvuE?si=C0haKGWpCd0ZPP_k"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div style="text-align: center;">Name</div>
+            </div>
+
+            <div style="margin: 20px;">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tWIKh0HtvuE?si=C0haKGWpCd0ZPP_k"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+                <div style="text-align: center;">Name</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+{% include 'footer.html' %}
+
+{% endblock content %}

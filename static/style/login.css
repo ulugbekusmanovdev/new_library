@@ -1,0 +1,130 @@
+#messages {
+    background-color: #0b8e0b;
+    padding: 20px;
+    color: #dfe3df;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 1;
+  }
+  
+  .form_box {
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .form_logo {
+    width: 20%;
+  }
+  
+  body, html {
+    background-color: #EBECF0;
+  }
+  
+  body, p, input, select, textarea, button {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+  }
+  
+  div, p {
+    color: #BABECC;
+    text-shadow: 1px 1px 1px #FFF;
+  }
+  
+  form {
+    border-radius: 30px;
+    border: 1px solid #333;
+    padding: 20px 20px 30px;
+    width: 35%;
+    margin: 0 auto;
+  }
+  
+  .segment {
+    padding: 32px 0;
+    text-align: center;
+  }
+  
+  .segment h1 {
+    color: #AE1100;
+  }
+  
+  button, input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  
+  input {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input:focus {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  }
+  
+  button {
+    color: #61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  }
+  button:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+  }
+  button.red {
+    display: block;
+    width: 100%;
+    color: #f5550e;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .input-group label {
+    margin: 0;
+    flex: 1;
+  }
+  
+  @media (max-width: 1450px) {
+    .form_logo {
+      width: 40%;
+    }
+    form {
+      width: 50%;
+    }
+  }
+  @media (max-width: 650px) {
+    .form_logo {
+      width: 50%;
+    }
+    form {
+      width: 70%;
+    }
+  }
+  
+  /*# sourceMappingURL=log.css.map */
+  

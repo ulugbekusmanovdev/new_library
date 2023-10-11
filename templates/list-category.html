@@ -1,0 +1,145 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+
+<body class="editor_false  lang_ru  not_ie">
+	
+	<div class="books_item">
+
+		<div class="books_drop">
+			<div class="books_dropdown">
+
+				<p class="dropD">Гуманитарные науки</p>
+
+				<ul class="books_dropdown-menu open">
+
+					{% for category in categories %}
+					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
+					{% endfor %}
+					<li><a href="#">Исторические науки</a></li>
+					<li><a href="#">Экономические науки</a></li>
+					<li><a href="#">Философские науки</a></li>
+					<li><a href="#">Филологические науки</a></li>
+					<li><a href="#">Социологические науки</a></li>
+					<li><a href="#">Политические науки</a></li>
+					<li><a href="#">Культурология</a></li>
+					<li><a href="#">Архитектура</a></li>
+					<li><a href="#">Библиотековедение, библиографоведение и книговедение</a></li>
+					<li><a href="#">Юридические науки</a></li>
+					<li><a href="#">Педагогические науки</a></li>
+					<li><a href="#">Искусствоведение</a></li>
+					<li><a href="#">Психологические науки</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="books_drop">
+			<div class="books_dropdown">
+				<p class="dropD">Естественные науки</p>
+				<ul class="books_dropdown-menu open">
+					{% for category in categories1 %}
+					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
+					{% endfor %}
+					<li><a href="#">Физико-математические науки</a></li>
+					<li><a href="#">Химические науки</a></li>
+					<li><a href="#">Биологические науки</a></li>
+					<li><a href="#">Сельскохозяйственные науки</a></li>
+					<li><a href="#">Медицинские науки</a></li>
+					<li><a href="#">Науки о земле</a></li>
+					<li><a href="#">Ветеринарные науки</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="books_drop">
+			<div class="books_dropdown">
+				<p class="dropD">Технические науки</p>
+				<ul class="books_dropdown-menu open">
+
+					{% for category in categories2 %}
+					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
+					{% endfor %}
+					<li><a href="#">Энергетическое, металлургическое и химическое машиностроение</a></li>
+					<li><a href="#">Транспортное, горное и строительное машиностроение</a></li>
+					<li><a href="#">Кораблестроение</a></li>
+					<li><a href="#">Радиотехника и связь</a></li>
+					<li><a href="#">Информатика, вычислительная техника и управление</a></li>
+					<li><a href="#">Энергетика</a></li>
+					<li><a href="#">Химическая технология</a></li>
+					<li><a href="#">Технология производственных продуктов</a></li>
+					<li><a href="#">Технология материалов и изделий текстильной и легкой промышленности</a></li>
+					<li><a href="#">Процессы и машины агроинженерных систем</a></li>
+					<li><a href="#">Технология, машины и оборудование для лесозагатовок</a></li>
+					<li><a href="#">Транспорт</a></li>
+					<li><a href="#">Строительство</a></li>
+					<li><a href="#">История науки и техники</a></li>
+					<li><a href="#">Электротехника</a></li>
+					<li><a href="#">Инженерная геометрия и компьютерная графика</a></li>
+					<li><a href="#">Машиностроение и машиноведение</a></li>
+					<li><a href="#">Авиационная и ракетно-космическая техника</a></li>
+					<li><a href="#">Приборостроение</a></li>
+					<li><a href="#">Электроника</a></li>
+					<li><a href="#">Металлургия</a></li>
+					<li><a href="#">Документальная информация</a></li>
+					<li><a href="#">Информационные системы и процессы, правовые аспекты информатики</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="wrapper"  style="padding-top: 60px;">
+
+
+
+		<div data-hcolor="#f5550e"
+			class="section section130 clip_none s_mode_s200 mobile_col2 inner_width img_square flex_fix transparent_ico"
+			style="background-color:#fff;padding-top:80px;padding-bottom:80px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#fff;"
+			data-id="4732122" id="b_4732122"><a name="a_4732122"></a>
+			<div class="section_inner all_border btn_move"
+				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400;">
+				<div class="title"><b><span style="font-size:30px; color: #2c2c2c;">Книги</span></b>
+				</div>
+				<div class="sub_title" style="font-size: 24px;">
+					<div>{{category.name | capfirst}}<br></div>
+				</div>
+
+				<div class="catalog_items short_text count5 s200 ">
+
+					{% for book in books %}
+					<div class="arr1">
+						<div class="col_4">
+							<div data-link="" class="image1 s200 shadow">
+								<img style="height: 230px;" data-lazy="1" loading="lazy" src="{{ book.photo.url }}">
+							</div>
+							<div class="title1">{{ book.title }}</div>
+							<div class="title1" style="font-size: 15px; margin: 0;">author</div>
+							<a class="btn1 surround  dark"
+								style="background-color:#f5550e; border-radius: 10em; text-decoration: none; color: #fff;"
+								href="{{book.pdf.url}}">
+								Читать
+							</a>
+
+						</div>
+
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+</body>
+
+{% include 'footer.html' %}
+
+{% endblock content %}
