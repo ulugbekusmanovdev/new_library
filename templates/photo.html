@@ -5,9 +5,9 @@
 
 {% include 'navbar.html' %}
 <style>
-    img{
-      object-fit: contain;
-    }
+	img {
+		object-fit: contain;
+	}
 </style>
 
 <body class="editor_false  lang_ru    not_ie">
@@ -26,8 +26,8 @@
 				<div class="sub_title cke_editable cke_editable_inline cke_contents_ltr" data-editor-type="default"
 					data-editor="text" data-name="sub_title" contenteditable="false" spellcheck="false" tabindex="0"
 					role="textbox">Все находяшие фото</div>
-				
-					<!-- <div class="arr1 " data-var-box="arr1" data-var-box-id="0">
+
+				<!-- <div class="arr1 " data-var-box="arr1" data-var-box-id="0">
 					
 					<div class="col_3">
 						<div class="image1 " data-editor-type="default" data-editor="image" data-name="image1">
@@ -155,27 +155,27 @@
 
 				<div class="container">
 					<div class=" w-100 mt-4">
-						<h4 class="d-block" >Recently Products</h4>
 						<div class="d-flex flex-wrap justify-content-between">
 							<!-- Product Cart Start -->
 							{% for i in photos %}
-							<div class="card border border-0 shadow-sm d-inline-block m-1 mt-3" style="width: 16.5rem;" >
+							<div class="card border border-0 shadow-sm d-inline-block m-1 mt-3" style="width: 16.5rem;">
 								{% if i.postimage_set.exists %}
-								<a href="{% url 'photo_detail' i.id %}"><img height="200" class=" card-img-top" src="{{i.postimage_set.all.first.image.url}}" alt=""></a>
+								<a href="{% url 'photo_detail' i.id %}"><img height="200" class=" card-img-top"
+										src="{{i.postimage_set.all.first.image.url}}" alt=""></a>
 								{% else %}
 								<img height="200" class=" card-img-top" src="images/14pro2.jfif" alt="">
 								{% endif %}
 								<div class="card-body">
 									<h6 class="align-center card-title">{{i.title}}</h6>
-									
+
 									<div class="buttons d-flex flex-wrap justify-content-between ">
-										
+
 									</div>
 								</div>
 							</div>
 							{% endfor %}
 							<!-- Product Cart End -->
-						   
+
 						</div>
 					</div>
 				</div>

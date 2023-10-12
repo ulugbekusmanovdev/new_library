@@ -89,34 +89,46 @@
 	</div>
 	<script>
 		$(function () {
-    const toggleMenu = menu => menu.slideToggle();
+    const toggleMenu = function(menu) {
+        menu.toggle();
+    };
 
-    const handleDropdownClick = function () {
+    const handleDropdownClick = function(event) {
+        event.stopPropagation();
         const menu = $(this).find('.books_dropdown-menu');
         toggleMenu(menu);
     };
 
-    $('.books_dropdown').on('click', handleDropdownClick);
+    const closeMenus = function() {
+        const openMenus = $('.books_dropdown-menu:visible');
+        openMenus.hide().removeData('clicked');
+    };
 
-    $('.books_dropdown').hover(function () {
-        if (window.innerWidth >= 768) {
-            handleDropdownClick.call(this);
+    // Используем click для открытия и закрытия меню как на ПК, так и на мобильных устройствах
+    $('.books_dropdown').on('click', function (event) {
+        const menu = $(this).find('.books_dropdown-menu');
+        if (menu.is(':visible')) {
+            menu.hide();
+        } else {
+            closeMenus(); // Закрываем другие открытые меню
+            toggleMenu(menu);
         }
     });
 
-    $('.books_dropdown-menu').on('click', function () {
+    $('.books_dropdown-menu').on('click', function (event) {
+        event.stopPropagation();
         $(this).data('clicked', true);
     });
 
     $(document).on('click', function (e) {
-        if (!$(e.target).closest('.books_dropdown').length) {
-            const openMenus = $('.books_dropdown-menu:visible');
-            openMenus.slideUp().removeData('clicked');
+        const target = $(e.target);
+        if (!target.closest('.books_dropdown').length && !target.closest('.books_dropdown-menu').length) {
+            closeMenus();
         }
     });
 
     if (window.innerWidth >= 768) {
-        $('.books_dropdown-menu:not(.open)').hide();
+        closeMenus();
     }
 });
 
@@ -130,7 +142,8 @@
 
 		<div data-hcolor="#f5550e"
 			class="books_sam section section130 clip_none s_mode_s200 mobile_col2 inner_width img_square flex_fix transparent_ico"
-			style="background-color:#fff;padding-top:80px;padding-bottom:80px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#fff;"><a name="a_4732122"></a>
+			style="background-color:#fff;padding-top:80px;padding-bottom:80px;--tiles_radius:0px;--tiles_shadow:none;--bg_color:#fff;">
+			<a name="a_4732122"></a>
 			<div class="section_inner all_border btn_move"
 				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400;">
 				<div class="title"><b><span style="font-size:30px; color: #2c2c2c;">Книги</span></b>
@@ -171,11 +184,11 @@
 					</div>
 
 
-					
+
 					{% endfor %}
 
 				</div>
-				
+
 			</div>
 		</div>
 
