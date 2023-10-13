@@ -20,19 +20,6 @@
 					{% for category in categories %}
 					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
 					{% endfor %}
-					<li><a href="#">Исторические науки</a></li>
-					<li><a href="#">Экономические науки</a></li>
-					<li><a href="#">Философские науки</a></li>
-					<li><a href="#">Филологические науки</a></li>
-					<li><a href="#">Социологические науки</a></li>
-					<li><a href="#">Политические науки</a></li>
-					<li><a href="#">Культурология</a></li>
-					<li><a href="#">Архитектура</a></li>
-					<li><a href="#">Библиотековедение, библиографоведение и книговедение</a></li>
-					<li><a href="#">Юридические науки</a></li>
-					<li><a href="#">Педагогические науки</a></li>
-					<li><a href="#">Искусствоведение</a></li>
-					<li><a href="#">Психологические науки</a></li>
 				</ul>
 			</div>
 		</div>
@@ -43,13 +30,7 @@
 					{% for category in categories1 %}
 					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
 					{% endfor %}
-					<li><a href="#">Физико-математические науки</a></li>
-					<li><a href="#">Химические науки</a></li>
-					<li><a href="#">Биологические науки</a></li>
-					<li><a href="#">Сельскохозяйственные науки</a></li>
-					<li><a href="#">Медицинские науки</a></li>
-					<li><a href="#">Науки о земле</a></li>
-					<li><a href="#">Ветеринарные науки</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -60,29 +41,7 @@
 					{% for category in categories1 %}
 					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
 					{% endfor %}
-					<li><a href="#">Энергетическое, металлургическое и химическое машиностроение</a></li>
-					<li><a href="#">Транспортное, горное и строительное машиностроение</a></li>
-					<li><a href="#">Кораблестроение</a></li>
-					<li><a href="#">Радиотехника и связь</a></li>
-					<li><a href="#">Информатика, вычислительная техника и управление</a></li>
-					<li><a href="#">Энергетика</a></li>
-					<li><a href="#">Химическая технология</a></li>
-					<li><a href="#">Технология производственных продуктов</a></li>
-					<li><a href="#">Технология материалов и изделий текстильной и легкой промышленности</a></li>
-					<li><a href="#">Процессы и машины агроинженерных систем</a></li>
-					<li><a href="#">Технология, машины и оборудование для лесозагатовок</a></li>
-					<li><a href="#">Транспорт</a></li>
-					<li><a href="#">Строительство</a></li>
-					<li><a href="#">История науки и техники</a></li>
-					<li><a href="#">Электротехника</a></li>
-					<li><a href="#">Инженерная геометрия и компьютерная графика</a></li>
-					<li><a href="#">Машиностроение и машиноведение</a></li>
-					<li><a href="#">Авиационная и ракетно-космическая техника</a></li>
-					<li><a href="#">Приборостроение</a></li>
-					<li><a href="#">Электроника</a></li>
-					<li><a href="#">Металлургия</a></li>
-					<li><a href="#">Документальная информация</a></li>
-					<li><a href="#">Информационные системы и процессы, правовые аспекты информатики</a></li>
+
 				</ul>
 			</div>
 		</div>
@@ -153,7 +112,7 @@
 				</div>
 				<div class="books_box-only">
 					<div class="books_search">
-						<form action="" method="GET">
+						<form action="{% url 'search' %}" method="GET" role="search">
 							<div class="books_search-box">
 								<input type="text" class="books_search-inp" placeholder="Искать книгу" name="q">
 								<button class="books_search-btn" type="submit">поиск</button>
@@ -173,7 +132,7 @@
 								<img style="height: 230px;" data-lazy="1" loading="lazy" src="{{ book.photo.url }}">
 							</div>
 							<div class="title1">{{book.title}}</div>
-							<div class="title1" style="font-size: 15px; margin: 0;">author</div>
+							<div class="title1" style="font-size: 15px; margin: 0;">{{ book.author }}</div>
 							<a class="btn1 surround  dark"
 								style="background-color:#f5550e; border-radius: 10em; text-decoration: none; color: #fff;"
 								href="{{book.pdf.url}}">
