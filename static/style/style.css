@@ -1,3 +1,4 @@
+
 /* Скрыть выпадающие подменю по умолчанию */
 .nav_submenu {
   display: none;
@@ -307,7 +308,7 @@
 
 .personal .personal_box .personal_info .personal_btn {
   margin: 10px 0 0 10px;
-  background-color: #f5550e;
+  background-color: #581b00;
   color: #fff;
   padding: 10px;
   border-radius: 10px;
@@ -431,6 +432,13 @@
   width: 450px !important;
   height: 300px !important;
 }
+
+.youtube{
+  background-color: #f5550e;
+  display: flex;
+
+}
+
 
 @media (max-width: 1180px) {
   .dropD {
