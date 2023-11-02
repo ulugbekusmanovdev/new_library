@@ -1,3 +1,5 @@
+
+
 		body.modal,
 		body.noscroll,
 		body>#wrapper {
@@ -80,6 +82,11 @@
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: antialiased
 		}
+
+		.youtube{
+			background-color: #f5550e;
+		  }
+
 
 		#basket_form_itogo>span,
 		#basket_left .item:not(.caption) .itogo,
@@ -51138,6 +51145,7 @@
 		.section1418 .section_inner {
 			width: 940px;
 			min-height: 700px
+			
 		}
 
 		.section1418 .title {

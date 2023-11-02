@@ -26,7 +26,7 @@ class Ads(models.Model):
     create_date = models.DateTimeField(auto_now=True, verbose_name='Дата')
 
     class Meta:
-        ordering = ('-create_date',)
+        ordering = ('-id',)
         verbose_name = 'Обявление'
         verbose_name_plural = 'Обявление'
 
