@@ -46,11 +46,30 @@
 
 
 
-
-
 .section130 .count5 .image1.s200 {
   height: 230px !important;
 }
+
+
+
+
+
+
+.vid{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.vid_inner{
+  width: 40%;
+}
+
+.vid_item iframe{
+  height: 480px;
+}
+
+
 
 
 
@@ -374,6 +393,7 @@
 
 
 
+
 /* GOOD to KNOW */
 
 .good_know {
@@ -412,19 +432,50 @@
   margin: 5px 0;
 }
 
-.good_know td {
-  border-bottom: 1px solid #000;
-  padding-top: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+
+
+
+/* Magazine */
+
+.magazine_main td{
+  font-size: 14px;
 }
 
+.magazine_main .magazine_subtitle{
+  padding: 10px !important;
+}
+
+.magazine {
+  text-align: center;
+  margin: 50px auto 100px;
+  width: 90%;
+}
+
+.magazine_title {
+  font-size: 22px;
+  padding: 20px 0;
+  color: #2c2c2c;
+}
+.magazine_subtitle {
+  font-size: 18px;
+  color: #2c2c2c;
+}
+
+.magazine td {
+  border: 1px solid #000;
+  padding: 5px;
+}
+
+
+
+/* SLIDER */
 
 .w-100{
-  height: 500px !important;
+  height: 480px !important;
   object-fit: cover;
 }
+
+
 
 
 
@@ -433,11 +484,7 @@
   height: 300px !important;
 }
 
-.youtube{
-  background-color: #ded6d3;
-  display: flex;
 
-}
 
 
 @media (max-width: 1180px) {
@@ -475,6 +522,13 @@
 
   .books_dropdown-menu {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .magazine td, .magazine th {
+      font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
+      padding: 5px;
   }
 }
 
