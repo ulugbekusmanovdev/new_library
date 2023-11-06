@@ -87,3 +87,11 @@ def photo_detail(request, photo_id):
     photo = get_object_or_404(Photo, id=photo_id)
 
     return render(request, 'single_photo.html', {'photo': photo})
+
+
+
+def video(request):
+    return render(request, 'video.html')
+
+def magazine(request):
+    return render(request, 'magazine.html')
