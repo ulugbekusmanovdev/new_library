@@ -1,6 +1,10 @@
 from django.contrib import admin
-from .models import News, Ads, About, Structure, Category, Book, Photo, PostImage, Newspaper
+from .models import *
+from embed_video.admin import AdminVideoMixin
 # Register your models here.
+
+class AdminVideo(AdminVideoMixin, admin.ModelAdmin):
+    pass
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -32,3 +36,5 @@ admin.site.register(Book, BookAdmin)
 admin.site.register(Photo, PhotoAdmin)
 admin.site.register(PostImage)
 admin.site.register(Newspaper)
+admin.site.register(Readers)
+admin.site.register(Video, AdminVideo)

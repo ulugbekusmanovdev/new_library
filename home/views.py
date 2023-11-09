@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import render
-from .models import News, Ads, About, Structure, Category, Book, Photo, Newspaper
+from .models import News, Ads, About, Structure, Category, Book, Photo, Newspaper, Video
 from django.shortcuts import get_object_or_404
 
 
@@ -11,7 +11,8 @@ def homepage(request):
     adt = Ads.objects.all().order_by('-id')[0:2]
     structure = Structure.objects.all()
     about = About.objects.all()
-    context = {'news': news,  'adt': adt, 'structure': structure, 'about': about, 'books': books}
+    videos = Video.objects.all()
+    context = {'news': news,  'adt': adt, 'structure': structure, 'about': about, 'books': books, 'videos': videos}
     return render(request, 'home.html', context)
 
 

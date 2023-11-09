@@ -13,6 +13,7 @@
 
 .menu1 li:hover .nav_submenu {
   display: block;
+  
 }
 
 /* Стилизация для пунктов подменю */
