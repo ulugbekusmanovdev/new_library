@@ -1,6 +1,6 @@
 from django.db.models import Q
 from django.shortcuts import render
-from .models import News, Ads, About, Structure, Category, Book, Photo, Newspaper, Video
+from .models import *
 from django.shortcuts import get_object_or_404
 
 
@@ -11,8 +11,12 @@ def homepage(request):
     adt = Ads.objects.all().order_by('-id')[0:2]
     structure = Structure.objects.all()
     about = About.objects.all()
+    history = History.objects.filter(id=1)
+    history1 = History.objects.filter(id=2)
     videos = Video.objects.all()
-    context = {'news': news,  'adt': adt, 'structure': structure, 'about': about, 'books': books, 'videos': videos}
+    context = {'news': news,  'adt': adt, 'structure': structure,
+                'about': about, 'books': books, 'videos': videos,
+                'history': history, 'history1': history1}
     return render(request, 'home.html', context)
 
 
@@ -31,8 +35,9 @@ def adt(request):
 
 def readers(request):
     newspapers = Newspaper.objects.all()
-    context = {'newspapers': newspapers}
-    return render(request, 'readers.html', context)
+    readers = Readers.objects.all()
+    context = {'newspapers': newspapers, 'readers': readers}
+    return render(request, 'readers.html', context) 
 
 
 def catalog(request):

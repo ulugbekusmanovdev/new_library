@@ -12,6 +12,10 @@ class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
 
 
+class HistoryAdmin(admin.ModelAdmin):
+    list_display =('id',)
+
+
 class BookAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
@@ -38,3 +42,4 @@ admin.site.register(PostImage)
 admin.site.register(Newspaper)
 admin.site.register(Readers)
 admin.site.register(Video, AdminVideo)
+admin.site.register(History, HistoryAdmin)

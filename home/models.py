@@ -38,10 +38,19 @@ class Ads(models.Model):
 class About(models.Model):
     title = models.CharField(max_length=200, null=True, blank=True)
     info = models.TextField()
-    history = models.TextField()
 
     def __str__(self):
         return self.title
+
+class History(models.Model):
+    text = models.TextField()
+
+    class Meta:
+        verbose_name = 'История'
+        verbose_name_plural = 'История'
+
+    def __str__(self):
+        return str(self.id)
 
 
 class Structure(models.Model):

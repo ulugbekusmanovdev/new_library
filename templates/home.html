@@ -1,6 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% load embed_video_tags %}
+{% load i18n %}
 
 {% block content %}
 
@@ -367,7 +368,7 @@
 				<div class="sub_title"><span style="font-size:20px">{{a.title}}</span></div>
 				<div data-link="" class="arr1 size_900x700 align_center rightt">
 					<div class="image1 shadow">
-						<img class="wh_about" data-lazy="1" loading="lazy" src="./static/img/about.jpg">
+						<img class="wh_about" data-lazy="1" loading="lazy" src="{% static 'img/about.jpg' %}">
 					</div>
 					<div class="txt1">
 						<div style="text-align: justify;">{{ a.info|safe }}</div>
@@ -450,15 +451,14 @@
 		<div class="section section117 clip_none" style="padding-top:80px;padding-bottom:80px;" data-id="4723136"
 			id="b_4723136"><a name="anchor9"></a>
 			<div class="section_inner width1170">
-				<div class="title" style="color: #2c2c2c;">История</div>
+				<div class="title" style="color: #2c2c2c;">История</div><br>
+
+				{% for i in history %}
 				<div class="historyCon" style="text-align: justify;  margin-bottom: 10px; "><span
-						style="font-size:18px; font-family:roboto;">Научная библиотека
-						Ошского Государственного университета активно и плодотворно функционирует с 1939 года со дня
-						основания данного учебного заведения. На основе постановления №1142 совета народных
-						комиссаров Кыргызстана от 10 августа 1939 года была образована Ошская школа учителей, в 1951
-						году постановлением №1759 правительства СССР – Ошский Государственный педагогический
-						институт, с 17 июня 1992 года согласно постановлению №202 президента КР был создан Ошский
-						Государственный Университет.</span></div>
+						style="font-size:18px; font-family:roboto;">{{i.text}}</span>
+				</div>
+				{% endfor %}
+
 				<div class="arr_wrapper">
 					<div class="arr1" style="margin: 0;">
 
@@ -496,29 +496,13 @@
 						</div>
 
 						<div class="col_2">
+							{% for i in history1 %}
 							<div class="txt1">
 								<p style="text-align: justify;"><span style="font-family:roboto"><span
-											style="font-size:17px;">Люди, руководящие и
-											внесшие большой вклад в создание научной библиотеки университета: А.И.
-											Федова, Ф.Х. Дауранова, К. Турсунова, А.В. Ильяева, М.Ю. Клебанова.
-											1947–1996 годы под руководством М.Ю. Клебановой фонд библиотеки был
-											переписан в инвентарные журналы, были составлены алфавитные, системные и
-											рабочие каталоги. 1996–2005 годы А. Г. Ибрагимова работала директором
-											научной библиотеки. В эти годы фонд библиотеки пополнился учебниками,
-											научно–методическими пособиями, диссертациями, словарями и другими книгами,
-											общее количество, которых превысило 730 тысяч. Фонд библиотеки достиг 812661
-											единиц. 2005–2009 годы С. С. Токтомамбетова работала в качестве директора
-											научной библиотеки. <br>
-											С 2009 по 2011 год научная библиотека университета находилась в ведении
-											Департамента новых
-											технологий и инвестиций, действовали четыре центральные библиотеки и три
-											отдела.
-											Первым заведующим кафедрой был кандидат биологических наук, доцент Эркебаев
-											Т.К., затем заведующим кафедрой был кандидат педагогических наук, доцент,
-											депутат городского совета Жоробеков Т.А. В это время книжный фонд научной
-											библиотеки составлял 880 000 экземпляров.
+											style="font-size:17px;">{{i.text}}
 										</span></span></p>
 							</div>
+							{% endfor %}
 						</div>
 					</div>
 
