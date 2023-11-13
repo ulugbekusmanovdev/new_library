@@ -6,3 +6,4 @@ from .models import *
 
 admin.site.register(Product)
 admin.site.register(Image)
+admin.site.register(Irbis)

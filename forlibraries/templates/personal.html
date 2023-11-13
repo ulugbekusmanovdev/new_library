@@ -51,6 +51,8 @@
                         <!-- <li><a class="personal_title" href="#">Видеоуроки </a></li> -->
                         <li><a class="personal_title" href="#">Добавление книги</a>
                         </li>
+                        <li><a class="personal_title" href="{% url 'video' %}">Видеоуроки</a>
+                        </li>
 
                         <li><a class="personal_title" href="#">Выход</a></li>
                     </ul>
@@ -59,9 +61,9 @@
         </div>
 
         {% for info in irbis %}
-        <h2 class="catalog_irbis">ИРБИС 64 <br></h2>
+        <h2 class="catalog_irbis">ИРБИС 64 {{info.title}} <br></h2>
 
-        <p class="catalog_text"></p>
+        <p class="catalog_text">{{info.text|safe}}</p>
 
         {% endfor %}
         <h2 style="text-align: center;">Видеоуроки</h2>

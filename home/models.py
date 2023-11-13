@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from embed_video.fields import EmbedVideoField
 
 
 # Create your models here.
@@ -37,10 +38,19 @@ class Ads(models.Model):
 class About(models.Model):
     title = models.CharField(max_length=200, null=True, blank=True)
     info = models.TextField()
-    history = models.TextField()
 
     def __str__(self):
         return self.title
+
+class History(models.Model):
+    text = models.TextField()
+
+    class Meta:
+        verbose_name = 'История'
+        verbose_name_plural = 'История'
+
+    def __str__(self):
+        return str(self.id)
 
 
 class Structure(models.Model):
@@ -128,3 +138,28 @@ class Newspaper(models.Model):
         verbose_name = 'Газета'
         verbose_name_plural = 'Газета'
         ordering = ('id',)
+
+class Readers(models.Model):
+    text = models.TextField()
+
+    def __str__(self):
+        return str(self.id)
+
+    class Meta:
+        verbose_name = 'Читатель'
+        verbose_name_plural = 'Читатель'
+
+
+class Video(models.Model):
+    title = models.CharField(max_length=100)
+    added = models.DateTimeField(auto_now=True)
+    url = EmbedVideoField()
+
+    def __str__(self):
+        return str(self.title)
+
+    class Meta:
+        ordering = ['-added']
+        verbose_name = "Видео"
+        verbose_name_plural = "Видео"
+        

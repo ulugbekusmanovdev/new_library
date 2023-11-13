@@ -38,3 +38,11 @@ class Image(models.Model):
 			url = ''
 		print('URL:', url)
 		return url
+
+	
+class Irbis(models.Model):
+	title = models.CharField(max_length=200, null=True, blank=True)
+	text = models.TextField()
+
+	def __str__(self):
+		return self.title

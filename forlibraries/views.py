@@ -9,7 +9,11 @@ from .models import *
 # 	return render(request, 'slider.html', context)
 
 def personal(request):
-    return render(request, 'personal.html')
+    irbis = Irbis.objects.all()
+    return render(request, 'personal.html', {'irbis': irbis})
 
 def login(request):
     return render(request, 'login.html')
+
+def video(request):
+    return render(request, 'videos1.html')
