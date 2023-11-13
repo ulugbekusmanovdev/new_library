@@ -403,6 +403,7 @@
 }
 
 .good_know .good_title {
+  font-family: Georgia, serif;
   padding: 20px;
   color: #2c2c2c;
 }
@@ -418,10 +419,7 @@
   width: 20%;
   margin: 10px;
 }
-.good_know .good_inner .good_item {
-  width: 20%;
-  margin: 10px;
-}
+
 .good_know .good_inner .good_item a {
   text-decoration: none;
 }
@@ -450,14 +448,17 @@
   margin: 50px auto 100px;
   width: 90%;
 }
-
 .magazine_title {
-  font-size: 22px;
+  font-family: Georgia, serif;
+
+  font-size: 24px;
   padding: 20px 0;
   color: #2c2c2c;
 }
+
 .magazine_subtitle {
-  font-size: 18px;
+  font-family: Georgia, serif;
+  font-size: 24px;
   color: #2c2c2c;
 }
 
@@ -498,6 +499,12 @@
 }
 
 @media (max-width: 800px) {
+  .w-100{
+    height: 300px !important;
+  }
+  .vid_item iframe{
+    height: 300px;
+  }
   .section130 .catalog_items.count3 .arr1 {
     width: 100%; 
 }
@@ -523,12 +530,24 @@
   .books_dropdown-menu {
     width: 100%;
   }
+  .good_know{
+    width: 80%;
+  }
+  .good_item{
+    width: 40%;
+  }
 }
 
 @media (max-width: 768px) {
+  .magazine{
+    width: 95%;
+  }
+  .magazine_main .magazine_subtitle{
+    padding: 0 25px 10px  !important;
+  }
   .magazine td, .magazine th {
-      font-size: 14px; /* Уменьшаем размер шрифта для мобильных устройств */
-      padding: 5px;
+      font-size: 10px; /* Уменьшаем размер шрифта для мобильных устройств */
+      padding: 1px;
   }
 }
 
@@ -557,7 +576,24 @@
   .books_sam {
     padding-top: 260px !important;
   }
+  .good_item p {
+    font-size: 15px;
+  }
+  .good_title{
+    font-size: 24px;
+  }
 
+  .vid{
+    flex-wrap: wrap;
+  }
+  .vid_inner{
+    margin-bottom: 25px;
+    width: 87%;
+  }
+
+  .non{
+    display: none;
+  }
 }
 
 @media (max-width: 425px) {
