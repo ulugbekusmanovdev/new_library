@@ -52,7 +52,7 @@
 
 
 
-
+/* VID */
 
 
 .vid{
@@ -67,10 +67,11 @@
 
 .vid_item iframe{
   height: 480px;
+  width: 100%;
 }
 
 
-
+/* BOOKS */
 
 
 .books_inner {
@@ -175,7 +176,7 @@
 
 
 
-
+/* STRUCTURE */
 
 
 .structure {
@@ -219,7 +220,7 @@
 }
 
 
-
+/* READERS */
 
 
 .readers {
@@ -245,6 +246,7 @@
 
 
 
+/* ADT */
 
 .adt {
   width: 100%;
@@ -278,6 +280,7 @@
 
 
 
+/* PERSONAL */
 
 .personal {
   width: 100%;
@@ -391,6 +394,38 @@
 }
 
 
+.personal_irbis-title{
+  font-size: 24px;
+  font-family: Georgia, serif; 
+}
+
+
+.personal_video-title{
+  font-family: Georgia, serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.personal_video-inner{
+  display: flex; 
+  justify-content: space-around;
+}
+
+.personal_video{
+  padding: 25px;
+  width: 40%;
+  height: 315px;
+}
+
+.personal_video iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.personal_video-text{
+  text-align: center;
+}
+
 
 
 
@@ -479,8 +514,8 @@
 
 
 
-
 .wh_about{
+  margin: 0 auto;
   width: 450px !important;
   height: 300px !important;
 }
@@ -494,6 +529,7 @@
   }
   .readers_box{
     width: 100%;
+    margin-right: 0;
   }
   .readers_text{
     width: 100%;
@@ -509,6 +545,15 @@
 }
 
 @media (max-width: 800px) {
+  .personal_video-inner{
+    flex-wrap: wrap;
+  }
+  .personal_video{
+    width: 100%;
+  }
+  .section226 .image1.shadow, .section226 .video1.shadow {
+    box-shadow: none;
+  }
   .w-100{
     height: 300px !important;
   }
@@ -549,6 +594,15 @@
 }
 
 @media (max-width: 768px) {
+  .personal{
+    flex-wrap: wrap-reverse;
+  }
+  .personal_box{
+    width: 100% !important;
+  }
+  .personal_inner{
+    width: 100% !important;
+  }
   .magazine{
     width: 95%;
   }
