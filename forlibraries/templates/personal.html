@@ -9,7 +9,7 @@
 
 
     <div style="margin: 115px auto 60px;  width: 85%;">
-        <h1 style="text-align: center;">Библиотекарям </h1>
+        <h1 style="text-align: center; font-family: Georgia, serif;">Библиотекарям </h1>
 
         <div class="personal">
 
@@ -61,27 +61,27 @@
         </div>
 
         {% for info in irbis %}
-        <h2 class="catalog_irbis">ИРБИС 64 {{info.title}} <br></h2>
+        <h2 class="personal_irbis-title">ИРБИС 64 {{info.title}} <br></h2>
 
-        <p class="catalog_text">{{info.text|safe}}</p>
+        <p class="personal_irbis-text">{{info.text|safe}}</p>
 
         {% endfor %}
-        <h2 style="text-align: center;">Видеоуроки</h2>
-        <div style="display: flex; justify-content: space-around;">
-            <div style="margin: 20px;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tWIKh0HtvuE?si=C0haKGWpCd0ZPP_k"
+        <h2 class="personal_video-title">Видеоуроки</h2>
+        <div class="personal_video-inner">
+            <div class="personal_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PbBFFCmrtRw?si=-BBtOQFvcmqWtiNw"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-                <div style="text-align: center;">Name</div>
+                <div  class="personal_video-text">Name</div>
             </div>
 
-            <div style="margin: 20px;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/tWIKh0HtvuE?si=C0haKGWpCd0ZPP_k"
-                    title="YouTube video player" frameborder="0"
+            <div class="personal_video">
+                <iframe src="https://www.youtube.com/embed/m_qlgFQs7E4?si=oOPRxjUznD7z2sJf" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
-                <div style="text-align: center;">Name</div>
+                <div class="personal_video-text">Name</div>
             </div>
         </div>
     </div>
