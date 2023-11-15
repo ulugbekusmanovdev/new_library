@@ -13,7 +13,6 @@
 
 .menu1 li:hover .nav_submenu {
   display: block;
-  
 }
 
 /* Стилизация для пунктов подменю */
@@ -490,6 +489,16 @@
 
 
 @media (max-width: 1180px) {
+  .readers_content{
+    flex-wrap: wrap;
+  }
+  .readers_box{
+    width: 100%;
+  }
+  .readers_text{
+    width: 100%;
+    text-align: center;
+  }
   .dropD {
     font-size: 18px;
   }
