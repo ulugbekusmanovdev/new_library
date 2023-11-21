@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video', 
+    'modeltranslation',
+
 
     'home.apps.HomeConfig',
     'forlibraries.apps.ForlibrariesConfig',
@@ -44,7 +46,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.locale.LocaleMiddleware', #translation
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -125,6 +127,9 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale',
 ]
 
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+
+MODELTRANSLATION_LANGUAGES = ('ky','ru')
 
 
 

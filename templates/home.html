@@ -20,13 +20,13 @@
 				<div class="layer">
 					<div class="layer_cover"></div>
 					<div class="title" style="margin-bottom:10px;font-weight:600;">
-						<p><strong><span style="font-size:72px">Добро пожаловать</span></strong></p>
-						<p><strong><span style="font-size:72px">на сайт библиотеки</span></strong></p>
+						<p><strong><span style="font-size:72px">{% trans 'Добро пожаловать' %}</span></strong></p>
+						<p><strong><span style="font-size:72px">{% trans 'на сайт библиотеки' %}</span></strong></p>
 					</div>
 					<div class="sub_title" style="margin-bottom:24px;font-weight:400;"><br></div>
 					<a style="text-decoration: none;" href="{% url 'books' %}">
 						<div class="btn1 surround animation dark" data-hcolor="#f78960"
-							style="background-color:#f78960; border-radius: 2em; box-shadow: 0; font-size: 18px">Книги
+							style="background-color:#f78960; border-radius: 2em; box-shadow: 0; font-size: 18px">{% trans 'Книги' %}
 						</div>
 					</a>
 					<div class="btn_descr"><br></div>
@@ -43,7 +43,7 @@
 			<div class="section_inner all_border btn_move"
 				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400;">
 				<a style="text-decoration: none; color: #2c2c2c;" href="{% url 'books' %}">
-					<div class="title"><b>Откройте для себя новую книгу</b></div>
+					<div class="title"><b>{% trans 'Откройте для себя новую книгу' %}</b></div>
 				</a>
 			</div>
 			<div class="catalog_items short_text count5 s200">
@@ -59,7 +59,7 @@
 						<a class="btn1 surround  dark"
 							style="background-color:#f5550e; border-radius: 10em; text-decoration: none; color: #fff;"
 							href="{{book.pdf.url}}">
-							Читать
+							{% trans 'Читать' %}
 						</a>
 
 
@@ -76,12 +76,10 @@
 		style="background-color:#ffffff;background-image:url(/img/1920x0/image_10047.jpg);padding-top:90px;padding-bottom:70px;"
 		data-id="4722812" id="b_4722812"><a name="anchor7"></a>
 		<div class="section_inner width1170">
-			<div class="title"><span style="color:#2c2c2c; font-size:50px">Новости в нашем
-					блоге</span></div>
+			<div class="title"><span style="color:#2c2c2c; font-size:50px">{% trans "Новости в нашем блоге" %}</span></div>
 			<div class="sub_title">
 				<p><span style="color:#000000"><span style="font-size:22px"></span></span><span
-						style="font-size:20px">Рассказываем о наиболее популярных новостях из мира
-						литературы</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
+						style="font-size:20px">{% trans "Рассказываем о наиболее популярных новостях из мира литературы" %}</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
 			</div>
 
 
@@ -98,7 +96,7 @@
 						<p style="text-align: justify; padding-right: 10px;"><span style="font-family:montserrat"><span
 									style="font-size:17px">{{ new.text}}</span></span></p>
 					</div><a href="{% url 'news' %}" class="btn1 surround  dark" data-hcolor="#f78960"
-						style="background-color:#f78960; border-radius: 2em; box-shadow: 0">Все</a>
+						style="background-color:#f78960; border-radius: 2em; box-shadow: 0">{% trans 'Все' %}</a>
 
 				</div>
 			</div>
@@ -113,7 +111,7 @@
 			<div class="section_inner all_border ">
 
 				<div class="title"><a style="text-decoration: none; color: #2c2c2c;"
-						href="{% url 'adt' %}">Объявления</a></div>
+						href="{% url 'adt' %}">{% trans 'Объявления' %}</a></div>
 
 				<div class="arr1">
 					{% for a in adt %}
@@ -134,7 +132,7 @@
 				</div>
 			</div>
 			<div class="adt_more">
-				<a style="text-decoration: none; color: #2c2c2c; " href="{% url 'adt' %}">Все</a>
+				<a style="text-decoration: none; color: #2c2c2c; " href="{% url 'adt' %}">{% trans 'Все' %}</a>
 			</div>
 		</div>
 
@@ -144,7 +142,7 @@
 			style="background-color:#fcf5ed;margin-top:90px;padding-bottom:80px;" data-id="4722808" id="b_4722808"><a
 				name="anchor4"></a>
 			<div class="section_inner">
-				<div class="title" style="color: #2c2c2c;">Ресурсы библиотеки</div>
+				<div class="title" style="color: #2c2c2c;">{% trans 'Ресурсы библиотеки' %}</div>
 				<div class="sub_title"><br>
 					<div><br></div>
 				</div>
@@ -243,35 +241,34 @@
 				<table class="good_box">
 
 					<h2 class="good_title"><a style="color: #2c2c2c;"
-							href="https://journal.oshsu.kg/index.php/index/index">Республиканские газеты и журналы</a></h2>
+							href="https://journal.oshsu.kg/index.php/index/index">{% trans 'Республиканские газеты и журналы' %}</a></h2>
 
 					<div class="good_inner">
 						<div class="good_item">
 							<a href="https://journal.oshsu.kg/index.php/vestnik" target="_blank">
 								<img src="{% static 'img/journal/1.jpg' %}" alt="">
-								<p>Вестник Ошского государственного университета</p>
+								<p>{% trans 'Вестник Ошского государственного университета' %}</p>
 							</a>
 						</div>
 
 						<div class="good_item">
 							<a href="https://journal.oshsu.kg/index.php/tfij" target="_blank">
 								<img src="{% static 'img/journal/2.jpg' %}" alt="">
-								<p>Научный журнал теологического факультета ОшГУ</p>
+								<p>{% trans 'Научный журнал теологического факультета ОшГУ' %}</p>
 							</a>
 						</div>
 
 						<div class="good_item">
 							<a href="https://journal.oshsu.kg/index.php/agriculture" target="_blank">
 								<img src="{% static 'img/journal/3.jpg' %}" alt="">
-								<p>Вестник Ошского государственного университета. Сельское хозяйство: агрономия,
-									ветеринария и зоотехния</p>
+								<p>{% trans "Вестник Ошского государственного университета. Сельское хозяйство: агрономия, ветеринария и зоотехния" %}</p>
 							</a>
 						</div>
 
 						<div class="good_item">
 							<a href="https://journal.oshsu.kg/index.php/orientalstudies" target="_blank">
 								<img src="{% static 'img/journal/4.jpg' %}" alt="">
-								<p>Вопросы востоковедения</p>
+								<p>{% trans 'Вопросы востоковедения' %}</p>
 							</a>
 						</div>
 					</div>
@@ -286,7 +283,7 @@
 
 		<div class="magazine_main magazine">
 
-			<h3 class="magazine_subtitle">Журналы других государств Каталог на 1-ое полугодие 2024 год</h3>
+			<h3 class="magazine_subtitle">{% trans "Журналы других государств Каталог на 1-ое полугодие 2024 год" %}</h3>
 			<table>
 				<tr>
 					<td>Индекси</td>
@@ -361,8 +358,7 @@
 			style="background-color:#ffffff;padding-top:90px;padding-bottom:60px;" data-id="4722809" id="b_4722809"><a
 				name="anchor5"></a>
 			<div class="section_inner width1170 image_move">
-				<div class="title"><span style="color:#2c2c2c"><span style="font-size:50px">Приходите к нам в
-							библиотеку</span></span></div>
+				<div class="title"><span style="color:#2c2c2c"><span style="font-size:50px">{% trans "Приходите к нам в библиотеку" %}</span></span></div>
 
 				{% for a in about %}
 				<div class="sub_title"><span style="font-size:20px">{{a.title}}</span></div>
@@ -451,7 +447,7 @@
 		<div class="section section117 clip_none" style="padding-top:80px;padding-bottom:80px;" data-id="4723136"
 			id="b_4723136"><a name="anchor9"></a>
 			<div class="section_inner width1170">
-				<div class="title" style="color: #2c2c2c;">История</div><br>
+				<div class="title" style="color: #2c2c2c;">{% trans 'История' %}</div><br>
 
 				{% for i in history %}
 				<div class="historyCon" style="text-align: justify;  margin-bottom: 10px; "><span

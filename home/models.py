@@ -39,6 +39,10 @@ class About(models.Model):
     title = models.CharField(max_length=200, null=True, blank=True)
     info = models.TextField()
 
+    class Meta:
+        verbose_name = 'О библиотеки'
+        verbose_name_plural = 'О библиотеки'
+
     def __str__(self):
         return self.title
 
@@ -162,4 +166,10 @@ class Video(models.Model):
         ordering = ['-added']
         verbose_name = "Видео"
         verbose_name_plural = "Видео"
-        
+
+class Catalog(models.Model):
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+
+    def __str__(self):
+        return str(self.title)    

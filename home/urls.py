@@ -16,6 +16,6 @@ urlpatterns = [
     path('magazine/', views.magazine, name='magazine'),
     path('photo_detail/<int:photo_id>/', views.photo_detail, name='photo_detail'),
     path('search/<slug:category_slug>/', views.list_category, name='list-category'),
-    
 
+    path("<str:language>", views.set_language, name="set-language"),
 ]
