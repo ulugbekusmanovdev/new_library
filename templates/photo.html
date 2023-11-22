@@ -1,6 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 
+{% load i18n %}
 {% block content %}
 
 {% include 'navbar.html' %}
@@ -25,7 +26,7 @@
 					role="textbox">Фото</div>
 				<div class="sub_title cke_editable cke_editable_inline cke_contents_ltr" data-editor-type="default"
 					data-editor="text" data-name="sub_title" contenteditable="false" spellcheck="false" tabindex="0"
-					role="textbox">Все находяшие фото</div>
+					role="textbox">{% trans 'Все находяшие фото' %}</div>
 
 				<!-- <div class="arr1 " data-var-box="arr1" data-var-box-id="0">
 					

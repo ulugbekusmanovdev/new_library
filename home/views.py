@@ -4,6 +4,35 @@ from .models import *
 from django.shortcuts import get_object_or_404
 
 
+#multilanguage
+from urllib.parse import urlparse
+from django.conf import settings
+from django.http import HttpResponseRedirect
+from django.urls.base import resolve, reverse
+from django.urls.exceptions import Resolver404
+from django.utils import translation
+
+
+def set_language(request, language):
+    for lang, _ in settings.LANGUAGES:
+        translation.activate(lang)
+        try:
+            view = resolve(urlparse(request.META.get("HTTP_REFERER")).path)
+        except Resolver404:
+            view = None
+        if view:
+            break
+    if view:
+        translation.activate(language)
+        next_url = reverse(view.url_name, args=view.args, kwargs=view.kwargs)
+        response = HttpResponseRedirect(next_url)
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, language)
+    else:
+        response = HttpResponseRedirect("/")
+    return response
+
+# multilanguage code end
+
 # Create your views here.
 def homepage(request):
     books = Book.objects.all().order_by('-id')[0:5]
@@ -41,7 +70,11 @@ def readers(request):
 
 
 def catalog(request):
-    return render(request, 'catalog.html')
+    b_catalog = Catalog.objects.filter(id=1)
+    catalog = Catalog.objects.filter(id=2)
+    el_catalog = Catalog.objects.filter(id=3)
+    context = {'b_catalog': b_catalog,'catalog': catalog, 'el_catalog': el_catalog}
+    return render(request, 'catalog.html', context)
 
 
 def structure(request):

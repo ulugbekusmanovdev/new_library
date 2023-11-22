@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -13,7 +14,7 @@
 		<div class="books_drop">
 			<div class="books_dropdown">
 
-				<p class="dropD">Гуманитарные науки</p>
+				<p class="dropD">{% trans 'Гуманитарные науки' %}</p>
 
 				<ul class="books_dropdown-menu open">
 
@@ -25,7 +26,7 @@
 		</div>
 		<div class="books_drop">
 			<div class="books_dropdown">
-				<p class="dropD">Естественные науки</p>
+				<p class="dropD">{% trans 'Естественные науки' %}</p>
 				<ul class="books_dropdown-menu open">
 					{% for category in categories1 %}
 					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
@@ -36,7 +37,7 @@
 		</div>
 		<div class="books_drop">
 			<div class="books_dropdown">
-				<p class="dropD">Технические науки</p>
+				<p class="dropD">{% trans 'Технические науки' %}</p>
 				<ul class="books_dropdown-menu open">
 					{% for category in categories1 %}
 					<li><a href="{{category.get_absolute_url}}">{{category.name | capfirst}}</a></li>
@@ -105,10 +106,10 @@
 			<a name="a_4732122"></a>
 			<div class="section_inner all_border btn_move"
 				style="--icon_size:64px;--btn_fweight:300;--btn_fsize:18px;--item_title_fweight:400;">
-				<div class="title"><b><span style="font-size:30px; color: #2c2c2c;">Книги</span></b>
+				<div class="title"><b><span style="font-size:30px; color: #2c2c2c;">{% trans 'Книги' %}</span></b>
 				</div>
 				<div class="sub_title" style="font-size: 24px;">
-					<div>Читайте с удавольствием<br></div>
+					<div>{% trans 'Читайте с удавольствием' %}<br></div>
 				</div>
 				<div class="books_box-only">
 					<div class="books_search">
@@ -135,8 +136,7 @@
 							<div class="title1" style="font-size: 15px; margin: 0;">{{ book.author }}</div>
 							<a class="btn1 surround  dark"
 								style="background-color:#f5550e; border-radius: 10em; text-decoration: none; color: #fff;"
-								href="{{book.pdf.url}}">
-								Читать
+								href="{{book.pdf.url}}">{% trans 'Читать' %}
 							</a>
 
 						</div>

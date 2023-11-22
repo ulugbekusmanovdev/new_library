@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -10,7 +11,7 @@
 
         <div class="readers">
             <div class="structure_container">
-                <h1 class="structure_title" style="color: #2c2c2c;">Читателям</h1>
+                <h1 class="structure_title" style="color: #2c2c2c;">{% trans 'Читателям' %}</h1>
                 <div class="readers_content">
                     <div class="readers_box">
                         <div style="width: 100%;" id="carouselExampleIndicators" class="carousel slide"
@@ -45,9 +46,9 @@
                     </div>
 
                     <div class="readers_text">
-                        <h1 style="color: #2c2c2c;">Правила пользования</h1>
+                        <h1 style="color: #2c2c2c;">{% trans 'Правила пользования' %}</h1>
                         {% for i in readers %}
-                        <p style="text-align: justify;">{{i.text}}</p>
+                        <p style="text-align: justify;">{{i.text|linebreaksbr}}</p>
                         {% endfor %}
                     </div>
 
