@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <body class="editor_false  lang_ru     not_ie">
@@ -12,12 +13,12 @@
             style="background-color:#ffffff;background-image:url(/img/1920x0/image_10047.jpg);padding-top:90px;padding-bottom:70px;"
             data-id="4722812" id="b_4722812"><a name="anchor7"></a>
             <div class="section_inner width1170">
-                <div class="title"><span style="color:#424242"><span style="font-size:50px">Новости в нашем
-                            блоге</span></span></div>
+                <div class="title"><span style="color:#424242"><span style="font-size:50px">{% trans 'Новости в нашем
+                            блоге' %}</span></span></div>
                 <div class="sub_title">
                     <p><span style="color:#000000"><span style="font-size:22px"></span></span><span
-                            style="font-size:20px">Рассказываем о наиболее популярных новостях из мира
-                            литературы</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
+                            style="font-size:20px">{% trans "Рассказываем о наиболее популярных новостях из мира
+                            литературы" %}</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
                 </div>
 
 

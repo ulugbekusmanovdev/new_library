@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -10,8 +11,8 @@
 
         <div class="magazine">
 
-            <h2 class="magazine_title">Республиканские газеты и журналы</h2>
-            <h3 class="magazine_subtitle">Журналы других государств Каталог на 1-ое полугодие 2024 год</h3>
+            <h2 class="magazine_title">{% trans 'Республиканские газеты и журналы' %}</h2>
+            <h3 class="magazine_subtitle">{% trans "Журналы других государств Каталог на 1-ое полугодие 2024 год" %}</h3>
             <table>
                 <tr>
                     <td>Индекси</td>

@@ -1,5 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 
@@ -15,7 +16,7 @@
 
         <div class="adt">
             <div class="structure_container">
-                <h1 class="structure_title">Объявление</h1>
+                <h1 class="structure_title">{% trans 'Объявление' %}</h1>
                 <div class="adt_content">
 
                     {% for a in adt %}
