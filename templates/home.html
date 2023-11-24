@@ -94,7 +94,7 @@
 									style="font-size:20px"><strong>{{new.title}}</strong></span></span></p>
 						<p><br></p>
 						<p style="text-align: justify; padding-right: 10px;"><span style="font-family:montserrat"><span
-									style="font-size:17px">{{ new.text}}</span></span></p>
+									style="font-size:17px">{{ new.text|truncatewords:60|linebreaksbr}}</span></span></p>
 					</div><a href="{% url 'news' %}" class="btn1 surround  dark" data-hcolor="#f78960"
 						style="background-color:#f78960; border-radius: 2em; box-shadow: 0">{% trans 'Все' %}</a>
 
@@ -123,7 +123,7 @@
 							</div>
 							<div class="overlay_image_subtitle subtitle1" style="text-align: justify;">
 								<span style="font-family:ubuntu">
-									<span style="font-size:16px; color:#000;">{{a.text}}</span></span>
+									<span style="font-size:16px; color:#000;">{{a.text|truncatewords:20}}</span></span>
 							</div>
 						</div>
 					</div>

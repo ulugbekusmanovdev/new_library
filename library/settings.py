@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video', 
-    # 'modeltranslation',
+    'modeltranslation',
 
 
     'home.apps.HomeConfig',
