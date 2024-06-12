@@ -199,7 +199,11 @@
 
 .structure_title {
   font-size: 28px;
-  text-align: center;
+  text-align: left;
+  border-bottom: 1px solid #666;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #66666677 ;
 }
 
 .structure_content {
@@ -256,24 +260,30 @@
 
 /* ADT */
 
+
+
 .adt {
   width: 100%;
   margin: 60px auto;
 }
 
 .adt_content {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Расстояние между колонками и строками */
+  /* justify-content: space-between; */
+ 
 }
 
 .adt_box {
-  width: 80%;
-  height: auto;
-  background-color: #fcf5ed;
+ 
   margin: 20px;
-  border-radius: 20px;
   padding: 10px 20px;
+  border-bottom: 1px solid #aaa;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(170, 170, 170);
 }
 
 .adt_more {
@@ -285,6 +295,34 @@
   font-weight: 500;
 }
 
+.adt_text h1 {
+  font-size: 35px;
+  color: #666;
+}
+.adt_text p {
+  font-size: 20px;
+  color: #666;
+  
+}
+
+
+@media (max-width:1150px) {
+  .adt_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 60px auto;
+  }
+  
+  .adt_box {
+    width: 85%; /* Каждый контейнер занимает половину ширины родительского контейнера */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+    padding: 10px 20px;
+    border-bottom: 1px solid #aaa;
+  }
+  
+}
 
 
 

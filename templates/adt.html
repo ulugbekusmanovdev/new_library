@@ -22,13 +22,17 @@
                     {% for a in adt %}
                     <div class="adt_box">
                         <div class="adt_text">
+                            <p>{{ a.create_date|date:"Y-m-d"}}</p>
                             <h1>{{a.title}}</h1>
-                            <p>{{ a.text }}</p>
+                            <p>{{ a.text }}</p> <br>
+                            
+                            
                         </div> 
                     </div>
                     {% endfor %}
-
+                
                 </div>
+                
             </div>
         </div>
 

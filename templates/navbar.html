@@ -1,7 +1,13 @@
+
 {% load i18n %}
 {% load static %}
 
 
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'style/style.css' %}">
+    
     
     <div class="section section2116 fixed_top" style="background-color: rgb(255, 255, 255); padding-top: 0px;
     padding-bottom: 0px; position: fixed; top: 0px; z-index: 101; left: 0px;" data-id="4722802" id="b_4722802">
@@ -39,17 +45,18 @@
                     </svg>
 
                 </div>
-                <div class="logo">
+                <div class="logo" >
                     <a href="{% url 'home' %}">
-                        <div class="logo_img">
-                            <img data-lazy="1" src="{% static 'img/logo.png' %}">
+                        <div class="logo_img" > 
+                            <img data-lazy="1" src="{% static 'img/logo.jpg' %}">
                         </div>
                 </div>
-                </a>
+                </a
+                > 	
 
 
-                <div class="menu1 menu_block animate_menu3" style="color:#212121;background-color:#fff;font-size:17px">
-                    <ul style="width:100%">
+                <div class="menu1 menu_block animate_menu3" style="color:#212121;background-color:#ffffff;font-size:17px">
+                    <ul >
                         <li class="level0">
                             <a href="{% url 'home'  %}" title="Главная">{% trans 'Главная' %}</a>
                             <!-- <ul class="nav_submenu">
@@ -64,7 +71,7 @@
                         <li class="level0"><a href="{% url 'home'  %}#anchor8" title="Контакты">{% trans 'Контакты' %}</a></li>
                         <li class="level0"><a href="{% url 'catalog' %}" title="Каталог">{% trans 'Каталог' %}</a></li>
                         <li class="level0"><a href="{% url 'readers' %}" title="Читатель">{% trans 'Читатель' %}</a></li>
-                        <li class="level0"><a href="{% url 'personal' %}" title="Библиотекарям">{% trans 'Библиотекарям' %}</a></li>
+                        <li class="level0"><a href="#" title="Библиотекарям">{% trans 'Библиотекарям' %}</a></li>
                         <li class="level0" style="display: none;"><a href="#" title="Регистрация">Рег</a></li>
 
                     </ul>
@@ -78,7 +85,7 @@
         </div>
 
     </div>
-    <ul class="navbar_lang">
+    <ul class="navbar_lang"  >
         <li class="lang_li"><a href="{% url 'set-language' 'ky' %}" title="Кыр">КЫР</a></li>
         <li class="lang_li"><a href="/" title="Рус">РУС</a></li>
     </ul>

@@ -1,4 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
+# SOME DESCRIP
+#TIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-24 11:04+0600\n"
+"POT-Creation-Date: 2023-12-11 07:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,162 +19,166 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\library\settings.py:122
+#: library/settings.py:128
 msgid "Kyrgyz"
 msgstr ""
 
-#: .\library\settings.py:123
+#: library/settings.py:129
 msgid "Russian"
 msgstr ""
 
-#: .\templates\adt.html:19
+#: templates/adt.html:19
 msgid "Объявление"
 msgstr "Жарыялар"
 
-#: .\templates\books.html:17 .\templates\list-category.html:17
+#: templates/books.html:17 templates/list-category.html:17
 msgid "Гуманитарные науки"
 msgstr "Гуманитардык илимдер"
 
-#: .\templates\books.html:29 .\templates\list-category.html:30
+#: templates/books.html:29 templates/list-category.html:30
 msgid "Естественные науки"
 msgstr "Табигый илимдер"
 
-#: .\templates\books.html:40 .\templates\list-category.html:41
+#: templates/books.html:40 templates/list-category.html:41
 msgid "Технические науки"
 msgstr "Техникалык илимдер"
 
-#: .\templates\books.html:109 .\templates\home.html:29
-#: .\templates\list-category.html:63 .\templates\navbar.html:61
+#: templates/books.html:109 templates/home.html:29
+#: templates/list-category.html:63 templates/navbar.html:61
 msgid "Книги"
 msgstr "Китептер"
 
-#: .\templates\books.html:112
-msgid "Читайте с удавольствием"
-msgstr "Ырахат алып окуңуз"
+#: templates/books.html:112
+msgid "Книга - великая вещь, пока человек умеет ею пользоваться!"
+msgstr "Билимдин кенин издесеңиз, китептен табасыз"
 
-#: .\templates\books.html:139 .\templates\home.html:62
+#: templates/books.html:139 templates/home.html:62
 msgid "Читать"
 msgstr "Окуу"
 
-#: .\templates\catalog.html:93
+#: templates/catalog.html:93
 msgid "Систематические каталоги"
 msgstr "Систематикалык каталогдор"
 
-#: .\templates\home.html:23
+#: templates/home.html:23
 msgid "Добро пожаловать"
-msgstr "Илимий китапкананын сайтына"
+msgstr "Илимий китепкананын сайтына"
 
-#: .\templates\home.html:24
+#: templates/home.html:24
 msgid "на сайт библиотеки"
-msgstr "кош келиңиз"
+msgstr "кош келиңиздер!"
 
-#: .\templates\home.html:46
+#: templates/home.html:46
 msgid "Откройте для себя новую книгу"
 msgstr "Жаңы китептер менен таанышыңыз"
 
-#: .\templates\home.html:79 .\templates\news.html:16
+#: templates/home.html:79 templates/news.html:16
 msgid "Новости в нашем блоге"
-msgstr "Биздин блогдогу жаңылыктар"
+msgstr "Биздин жаңылыктар"
 
-#: .\templates\home.html:82 .\templates\news.html:19
-msgid "Рассказываем о наиболее популярных новостях из мира литературы"
-msgstr "Адабият дүйнөсүндөгү эң популярдуу жаңылыктар тууралуу сүйлөшөбүз"
+#: templates/home.html:82 templates/news.html:19
+msgid "Самые интересные и востребованные новости в нашей страничке"
+msgstr "Китепканадагы жаңылыктар менен бөлүшөбүз"
 
-#: .\templates\home.html:99 .\templates\home.html:135
+#: templates/home.html:99 templates/home.html:135 templates/home.html:351
 msgid "Все"
 msgstr "Баары"
 
-#: .\templates\home.html:114
+#: templates/home.html:114
 msgid "Объявления"
-msgstr "Кулактандыруу"
+msgstr "Жарыялар"
 
-#: .\templates\home.html:145 .\templates\navbar.html:63
+#: templates/home.html:145 templates/navbar.html:63
 msgid "Ресурсы библиотеки"
-msgstr "Китепкананын ресурстары"
+msgstr "Китепкананын ички ресурстары"
 
-#: .\templates\home.html:244 .\templates\magazine.html:14
-msgid "Республиканские газеты и журналы"
-msgstr "Республикалык газеталар жана журналдар "
+#: templates/home.html:244 templates/magazine.html:14
+msgid "Вестник ОшГУ"
+msgstr "ОшМУнун жарчысы"
 
-#: .\templates\home.html:250
+#: templates/home.html:250
 msgid "Вестник Ошского государственного университета"
 msgstr "ОшМУнун жарчысы"
 
-#: .\templates\home.html:257
+#: templates/home.html:257
 msgid "Научный журнал теологического факультета ОшГУ"
 msgstr "ОшМУнун теология факультетинин илимий журналы "
 
-#: .\templates\home.html:264
+#: templates/home.html:264
 msgid ""
 "Вестник Ошского государственного университета. Сельское хозяйство: "
 "агрономия, ветеринария и зоотехния"
 msgstr "ОшМУнун жарчысы. Айыл чарба: агрономия, ветеринария жана зоотехния"
 
-#: .\templates\home.html:271
+#: templates/home.html:271
 msgid "Вопросы востоковедения"
 msgstr "Чыгыш таануунун маселелери"
 
-#: .\templates\home.html:286 .\templates\magazine.html:15
+#: templates/home.html:286 templates/magazine.html:15
 msgid "Журналы других государств Каталог на 1-ое полугодие 2024 год"
-msgstr ""
-"Башка өлкөлөрдүн журналдарынын  2024-жылдын биринчи жарым жылдыгынын каталогу"
+msgstr "Башка өлкөлөрдүн журналдарынын 2024-жылдын биринчи жарым жылдыгынын каталогу"
 
-#: .\templates\home.html:361
+#: templates/home.html:361
 msgid "Приходите к нам в библиотеку"
 msgstr "Биздин китепканага келиңиздер "
 
-#: .\templates\home.html:450 .\templates\navbar.html:57
+#: templates/home.html:392
+msgid "Все фото"
+msgstr "Бардык сүрөттөр"
+
+#: templates/home.html:450 templates/navbar.html:57
 msgid "История"
 msgstr "Тарых"
 
-#: .\templates\navbar.html:54
+#: templates/navbar.html:54
 msgid "Главная"
 msgstr "Башкы"
 
-#: .\templates\navbar.html:56
+#: templates/navbar.html:56
 msgid "О библиотеке"
 msgstr "Китепкана жөнүндө"
 
-#: .\templates\navbar.html:58
+#: templates/navbar.html:58
 msgid "Структура"
-msgstr "Структура"
+msgstr "Түзүм"
 
-#: .\templates\navbar.html:62
+#: templates/navbar.html:62
 msgid "Новости"
 msgstr "Жаңылыктар"
 
-#: .\templates\navbar.html:64
+#: templates/navbar.html:64
 msgid "Контакты"
 msgstr "Байланыштар"
 
-#: .\templates\navbar.html:65
+#: templates/navbar.html:65
 msgid "Каталог"
 msgstr "Каталог"
 
-#: .\templates\navbar.html:66
+#: templates/navbar.html:66
 msgid "Читатель"
 msgstr "Окурман"
 
-#: .\templates\navbar.html:67
+#: templates/navbar.html:67
 msgid "Библиотекарям"
 msgstr "Китепканачыларга"
 
-#: .\templates\photo.html:29
+#: templates/photo.html:26 templates/single_photo.html:26
+msgid "Фото"
+msgstr "Сүрөт"
+
+#: templates/photo.html:29
 msgid "Все находяшие фото"
 msgstr "Бардык сүрөттөр"
 
-#: .\templates\readers.html:14
+#: templates/readers.html:14
 msgid "Читателям"
 msgstr "Окурмандарга"
 
-#: .\templates\readers.html:49
-msgid "Правила пользования"
-msgstr "Колдонуу эрежеси"
+#: templates/readers.html:49
+msgid "Правила пользования библиотекой"
+msgstr "Китепканадан пайдалануунун эрежелери"
 
-#: .\templates\readers.html:66
+#: templates/readers.html:66
 msgid "Заказать книгу онлайн"
-msgstr "Китепти онлайн заказ берүү"
+msgstr "Китепке онлайн буюрутма берүү"
 
-#: .\templates\single_photo.html:26
-msgid "Фото"
-msgstr "Сүрөт"

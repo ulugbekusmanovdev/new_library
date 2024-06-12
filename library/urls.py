@@ -26,7 +26,7 @@ urlpatterns = [
 ]+i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path('', include('home.urls')),
-    path('libraries/', include('forlibraries.urls')),
+    #path('libraries/', include('forlibraries.urls')),
     prefix_default_language=False,
 )
 

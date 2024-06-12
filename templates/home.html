@@ -79,24 +79,29 @@
 			<div class="title"><span style="color:#2c2c2c; font-size:50px">{% trans "Новости в нашем блоге" %}</span></div>
 			<div class="sub_title">
 				<p><span style="color:#000000"><span style="font-size:22px"></span></span><span
-						style="font-size:20px">{% trans "Рассказываем о наиболее популярных новостях из мира литературы" %}</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
+						style="font-size:20px">{% trans "Самые интересные и востребованные новости в нашем блоге" %}</span><span style="color:#000000"><span style="font-size:22px"></span></span></p>
 			</div>
 
 
 			{% for new in news %}
 			<div class="arr1 size_700x500 btn_under_text">
+				
 				<div data-link="" class="image1 link_on size_700x500 ">
 					<img data-lazy="1" loading="lazy" width="350px" height="250px" src="{{new.image.url}}">
 				</div>
+				
 				<div class="right size_700x500 btn_under_text ">
+					
 					<div class="txt1 ">
 						<p><span style="color:#424242"><span
 									style="font-size:20px"><strong>{{new.title}}</strong></span></span></p>
 						<p><br></p>
 						<p style="text-align: justify; padding-right: 10px;"><span style="font-family:montserrat"><span
 									style="font-size:17px">{{ new.text|truncatewords:60|linebreaksbr}}</span></span></p>
-					</div><a href="{% url 'news' %}" class="btn1 surround  dark" data-hcolor="#f78960"
+					</div> <div class="date-display" ><a href="{% url 'news' %}" class="btn1 surround  dark" data-hcolor="#f78960"
 						style="background-color:#f78960; border-radius: 2em; box-shadow: 0">{% trans 'Все' %}</a>
+						 <div class="date-right" > <p>rr</p><p>dd</p> <p class="date-p">{{ new.create_date|date:"Y-m-d"}}</p> </div> 
+						</div>
 
 				</div>
 			</div>
