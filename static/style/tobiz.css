@@ -55746,6 +55746,20 @@
 
 .date-right p {
 	margin: 0; 
-	margin-right: 20px;
+	margin-right: 41px;
+}
+
+
+
+.date-right2 {
+    display: flex;
+	justify-content: flex-end; 
+    padding: 10px;  
+
+}
+
+.date-p {
+    margin: 0; 
+	margin-right: 50px;
 }
 

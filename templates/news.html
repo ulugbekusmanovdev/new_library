@@ -26,11 +26,16 @@
                         <img data-lazy="1" loading="lazy" width="350px" height="250px" src="{{new.image.url}}">
                     </div>
                     <div class="right size_700x500 btn_under_text ">
+                       
                         <div class="txt1 ">
                             <p><span style="color:#424242"><span style="font-size:20px"><strong>{{ new.title }}</strong></span></span></p>
                             <p><br></p>
                             <p><span style="font-family:montserrat"><span style="font-size:17px">{{ new.text|linebreaksbr }}</span></span></p>
+                            
                         </div>
+                        <div class="date-right2" >
+                            <p class="date-p">{{ new.create_date|date:"Y-m-d"}}</p> 
+                           </div>
 
                     </div>
                     <div class="clear"></div>
