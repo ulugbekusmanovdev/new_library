@@ -104,7 +104,7 @@
 									style="font-size:17px">{{ new.text|truncatewords:60|linebreaksbr}}</span></span></p>
 					</div> <div class="date-right" > <a href="{% url 'news' %}" class="btn1 surround  dark" data-hcolor="#f78960"
 						style="background-color:#f78960; border-radius: 2em; box-shadow: 0">{% trans 'Все' %}</a>
-						  <p class="date-p">{{ new.create_date|date:"Y-m-d"}}</p> 
+						  <p class="date-p">{{ new.create_date|date:"d-m-Y"}}</p> 
 						</div>
 
 				</div>
